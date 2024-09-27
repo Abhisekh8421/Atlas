@@ -1,0 +1,17 @@
+[
+    {
+      "icon": "MdPlace",
+      "title": "Find us",
+      "details": "Vizag, Andhra Pradesh"
+    },
+    {
+      "icon": "IoCallSharp",
+      "title": "Call us",
+      "details": "+917330664923"
+    },
+    {
+      "icon": "TbMailPlus",
+      "title": "Mail us",
+      "details": "abhisekhsuru@gmail.com"
+    }
+  ]
