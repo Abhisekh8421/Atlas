@@ -84,10 +84,10 @@ const Country = () => {
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = "grey")
-              } // Highlight on hover
+              } 
               onMouseLeave={(e) =>
                 (e.currentTarget.style.backgroundColor = "white")
-              } // Remove highlight
+              } 
             >
               <NavLink
                 to={`/country/${name.common}`}
