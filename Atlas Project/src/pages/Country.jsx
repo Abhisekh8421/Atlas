@@ -57,7 +57,7 @@ const Country = () => {
         countries={countries}
         setcountries={setcountries}
       />{" "}
-      {/* Container for suggestion box */}
+      
       <div
         style={{
           border: "1px solid #ccc",
@@ -66,9 +66,9 @@ const Country = () => {
           overflowY: "auto",
           backgroundColor: "#fff",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          position: "absolute", // So it appears below the search box
-          width: "100%", // Take the full width of the container
-          zIndex: "1000", // Ensure it appears on top
+          position: "absolute", 
+          width: "100%",
+          zIndex: "1000",
         }}
       >
         {filterCountries.slice(0, 10).map((country, index) => {
