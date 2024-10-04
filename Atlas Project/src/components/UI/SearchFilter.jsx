@@ -27,14 +27,17 @@ const SearchFilter = ({
     setfilter(event.target.value);
   };
   return (
-    <section className="section-searchFilter container">
-      <div >
+    <section
+      className="section-searchFilter container"
+      style={{ position: "relative" }}
+    >
+      <div>
         <input
           type="text"
           placeholder="search...."
           value={search}
           onChange={handleInputChange}
-          style={{ borderRadius: "10px", padding:"5px 10px" }}
+          style={{ borderRadius: "10px", padding: "5px 10px" }}
         />
       </div>
       <div>

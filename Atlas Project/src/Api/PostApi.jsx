@@ -15,3 +15,9 @@ export const getCountryIndData = (name) => {
     `/name/${name}?fullText=true&fields=name,population,region,subregion,capital,tld,currencies,languages,borders,flags`
   );
 };
+
+export const getCountryNamedata = (name) => {
+  if (name !== undefined) {
+    return api.get(`https://restcountries.com/v3.1/name/${name}?fullText=true&fields=name`);
+  }
+};
