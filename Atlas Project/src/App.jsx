@@ -8,6 +8,11 @@ import Contact from "./pages/Contact";
 import AppLayout from "./components/Layout/AppLayout";
 import ErrorPage from "./pages/ErrorPage";
 import CountryDetails from "./components/Layout/CountryDetails";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQueryClient,
+} from "@tanstack/react-query";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +45,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router}></RouterProvider>;
+  const queryClient = new QueryClient();
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}></RouterProvider>
+    </QueryClientProvider>
+  );
 };
 
 export default App;

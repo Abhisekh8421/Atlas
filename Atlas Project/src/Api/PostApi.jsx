@@ -4,20 +4,33 @@ const api = axios.create({
   baseURL: "https://restcountries.com/v3.1",
 });
 
-// HTTP GET METHOD
-export const getCountryData = () => {
-  return api.get("/all?fields=name,population,region,capital,flags");
+
+export const getCountryData = async () => {
+  return await api.get("/all?fields=name,population,region,capital,flags");
 };
 
-// HTTP GET METHOD fro the indvi. country name
+
 export const getCountryIndData = (name) => {
   return api.get(
     `/name/${name}?fullText=true&fields=name,population,region,subregion,capital,tld,currencies,languages,borders,flags`
   );
 };
 
+export const getCountryPageData = async (page, limit = 8) => {
+  const res = await api.get("/all?fields=name,population,region,capital,flags");
+
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+
+  const paginatedData = res.data.slice(startIndex, endIndex);
+
+  return paginatedData;
+};
+
 export const getCountryNamedata = (name) => {
   if (name !== undefined) {
-    return api.get(`https://restcountries.com/v3.1/name/${name}?fullText=true&fields=name`);
+    return api.get(
+      `https://restcountries.com/v3.1/name/${name}?fullText=true&fields=name`
+    );
   }
 };
