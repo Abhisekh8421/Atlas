@@ -104,7 +104,7 @@ const Country = () => {
         })}
       </div>
       <ul className="grid grid-four-cols" style={{ marginTop: "23rem" }}>
-        {data.slice(0, 10).map((country, index) => {
+        {data.slice(0, 10).map((country, index) => {   ///data is used there 
           return <CountryCard country={country} key={index} />;
         })}
       </ul>

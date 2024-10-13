@@ -1,25 +1,32 @@
 import React, { useEffect, useState, useTransition } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { getCountryIndData } from "../../Api/PostApi";
 import { Loader } from "../UI/Loader";
 
 const CountryDetails = () => {
   const params = useParams();
+  const navigate = useNavigate();
 
   const [isPending, startTransition] = useTransition();
   const [country, setCountry] = useState();
 
   useEffect(() => {
     startTransition(async () => {
-      const res = await getCountryIndData(params.id);
-      console.log(res);
-      if (res.status === 200) {
-        setCountry(res.data[0]);
+      try {
+        const res = await getCountryIndData(params.id);
+        console.log(res);
+        if (res.status === 200 && res.data.length > 0) {
+          setCountry(res.data[0]);
+        } else {
+          navigate("/error", { replace: true });
+        }
+      } catch (error) {
+        console.error("Error fetching country data:", error);
+        // Redirect in case of an error as well
+        navigate("/error", { replace: true });
       }
-
-      console.log(Object.keys(res.data[0].name.nativeName));
     });
-  }, []);
+  }, [params.id, navigate]);
 
   if (isPending) return <Loader />;
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import BreadScrumb from "./BreadScrumb";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
               <h1>World Atlas</h1>
             </NavLink>
           </div>
+
           <nav className={show ? "menu-mobile" : "menu-web"}>
             <ul>
               <li>
@@ -33,12 +35,15 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+
           <div className="ham-menu">
             <button onClick={handleButtonToggle}>
               <GiHamburgerMenu />
             </button>
           </div>
+        
         </div>
+        <BreadScrumb />
       </div>
     </header>
   );
