@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "question": "What is the capital of a country?",
+      "answer": "The capital of a country is its primary city, where the government and administrative functions are typically located. For example, the capital of France is Paris."
+    },
+    {
+      "id": 2,
+      "question": "Which currencies are used in a country?",
+      "answer": "A country uses a specific currency for trade and economic activities. For example, the currency of Japan is the Yen (JPY), while the United States uses the Dollar (USD)."
+    },
+    {
+      "id": 3,
+      "question": "What is the population of a country?",
+      "answer": "Population refers to the number of people living in a country. For example, India's population exceeds 1.4 billion people."
+    },
+    {
+      "id": 4,
+      "question": "What languages are spoken in a country?",
+      "answer": "Countries often have multiple languages spoken by their people. For example, in Canada, both English and French are official languages."
+    },
+    {
+      "id": 5,
+      "question": "What is the native name of a country?",
+      "answer": "The native name of a country is how its people refer to the country in their own language. For example, the native name of Germany is 'Deutschland.'"
+    },
+    {
+      "id": 6,
+      "question": "In which region is a country located?",
+      "answer": "Countries are divided into regions based on geography, politics, or culture. For example, Brazil is located in the South American region."
+    }
+  ]
+  
