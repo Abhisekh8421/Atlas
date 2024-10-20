@@ -11,7 +11,21 @@ const Faq = ({ curData, ontoggle, isActive }) => {
           {isActive ? "👎" : "👍"}
         </button>
       </div>
-      {isActive && answer}
+      {isActive && (
+        <p
+          style={{
+            padding: "10px 15px",
+            backgroundColor: "#fafafa",
+            color: "#555",
+            fontSize: "16px",
+            lineHeight: "1.5",
+            borderRadius: "5px",
+            marginTop: "5px",
+          }}
+        >
+          {answer}
+        </p>
+      )}
     </li>
   );
 };
